@@ -54,15 +54,20 @@ Ce jeu Android est un **livre interactif** mêlant **narration** et **combats dy
 4. Cliquer sur **Run** pour tester !
 
 ---
-## Aperçu
+## 🎮 Gameplay
+
+<p align="center">
+  <video src="https://github.com/user-attachments/assets/707a9c0e-c961-4569-b246-264b8f55d22b" width="400" controls></video>
+</p>
+
+---
+
+## 📸 Aperçu
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/f8c8846b-d70c-4f89-a4a3-02ddbad0f345" width="300"/>
   <img src="https://github.com/user-attachments/assets/da75fd06-7886-4487-abed-afb8c9e0caf4" width="300"/>  
 </p>
-
-
-
 
 ## Auteurs
 
