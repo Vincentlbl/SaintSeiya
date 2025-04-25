@@ -60,6 +60,3 @@ Ce jeu Android est un **livre interactif** mêlant **narration** et **combats dy
 - **Vincent Lebel**
 - **Numa**
 - **Matéo**
-
-Projet réalisé dans le cadre de notre passion pour **Saint Seiya** et le développement mobile 🎮🌟.
-
