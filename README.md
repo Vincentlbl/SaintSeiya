@@ -56,9 +56,7 @@ Ce jeu Android est un **livre interactif** mêlant **narration** et **combats dy
 ---
 ## Aperçu
 
-![image](https://github.com/user-attachments/assets/0dd7fec4-a818-4ed0-9a58-c31f87c2cd18)
-![image](https://github.com/user-attachments/assets/8a55c57b-e28d-4ad7-be65-0f3e6b3eafe4)
-
+<p align="center"> <img src="https://github.com/user-attachments/assets/0dd7fec4-a818-4ed0-9a58-c31f87c2cd18" width="300"/> <img src="https://github.com/user-attachments/assets/8a55c57b-e28d-4ad7-be65-0f3e6b3eafe4" width="300"/> </p>
 
 
 
