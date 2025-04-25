@@ -1,0 +1,11 @@
+<!-- Exemple pour TextView -->
+<TextView
+    android:id="@+id/gameOverMessage"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Tu as échoué, mais l'espoir demeure..."
+    android:textColor="#FFD700" <!-- Couleur dorée -->
+    android:textSize="20sp"
+    android:gravity="center"
+    android:paddingBottom="24dp"
+    android:fontFamily="@font/mythos" />

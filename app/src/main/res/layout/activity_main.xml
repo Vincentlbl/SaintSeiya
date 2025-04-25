@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Image de fond -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_sanctuaire"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true" />
+
+    <!-- Zone principale -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <!-- ScrollView pour l'histoire -->
+        <ScrollView
+            android:id="@+id/storyScroll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:layout_above="@+id/choiceContainer"
+            android:layout_marginBottom="16dp">
+
+            <!-- TextView avec fond arrondi -->
+            <TextView
+                android:id="@+id/textStory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_background"
+                android:text="Texte de l’histoire ici"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:lineSpacingExtra="6dp"
+                android:fontFamily="serif"
+                android:layout_marginBottom="2000dp"
+                android:padding="16dp" />
+        </ScrollView>
+
+        <!-- Conteneur pour les choix -->
+        <LinearLayout
+            android:id="@+id/choiceContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:background="#66000000"
+            android:padding="12dp" />
+
+        <!-- Bouton debug -->
+        <Button
+            android:id="@+id/debugButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Debug"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="8dp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#555555" />
+    </RelativeLayout>
+
+</RelativeLayout>

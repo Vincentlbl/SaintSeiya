@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Image de fond -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/title_screen_background" />
+
+    <!-- Superposition semi-transparente pour la lisibilité -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Boutons au centre -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/btnNewGame"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="NOUVELLE PARTIE"
+            android:textAllCaps="true"
+            android:backgroundTint="#444"
+            android:textColor="#FFF"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnContinue"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="CONTINUER"
+            android:textAllCaps="true"
+            android:backgroundTint="#444"
+            android:textColor="#FFF" />
+    </LinearLayout>
+</RelativeLayout>

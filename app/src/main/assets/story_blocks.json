@@ -1,0 +1,588 @@
+[
+  {
+    "id": "start",
+    "text": "Athéna est blessée... Une flèche d’or a transpercé son cœur lors d’un complot ourdi par le Grand Pope. Il ne me reste que quelques heures pour traverser les 12 maisons du Zodiaque. Seiya, c’est maintenant ou jamais.",
+    "choices": [
+      {
+        "text": "Je pars sans hésiter !",
+        "nextBlockId": "maison_belier"
+      }
+    ]
+  },
+  {
+    "id": "maison_belier",
+    "text": "Mû : \"Seiya... ton armure est en ruines. Tu ne peux pas protéger Athéna dans cet état. Donne-la moi, je vais la restaurer. Mais chaque seconde compte.\"",
+    "choices": [
+      {
+        "text": "Donner l’armure à Mû",
+        "nextBlockId": "reparation_belier"
+      },
+      {
+        "text": "Refuser l’aide de Mû et continuer sans attendre",
+        "nextBlockId": "maison_taureau_sans_reparation"
+      }
+    ]
+  },
+  {
+    "id": "reparation_belier",
+    "text": "Mû ferme les yeux et une lumière dorée enveloppe mon armure. Quand il me la rend, elle brille comme au premier jour. \"Je t’offre aussi ceci\", dit-il en me tendant une potion de cosmos.",
+    "giveItem": "potion_cosmos",
+    "choices": [
+      {
+        "text": "Remercier Mû et avancer vers la Maison du Taureau",
+        "nextBlockId": "maison_taureau"
+      }
+    ]
+  },
+  {
+    "id": "maison_taureau_sans_reparation",
+    "text": "Aldébaran : \"Tu oses venir jusqu’ici dans un tel état ? Ton courage est grand, mais suffira-t-il ? Prépare-toi à affronter ma puissance !\"",
+    "choices": [
+      {
+        "text": "Tenter de le combattre avec mon armure endommagée",
+        "nextBlockId": "combat_aldebaran"
+      },
+      {
+        "text": "Essayer de fuir",
+        "nextBlockId": "mort_fuite_taureau"
+      }
+    ]
+  },
+  {
+    "id": "maison_taureau",
+    "text": "Aldébaran : Tu es Seiya du Pégase, n’est-ce pas ? Si tu veux passer, tu devras d’abord me vaincre. Je sens ton cosmos… Il est plus fort qu’il n’y paraît !",
+    "choices": [
+      {
+        "text": "Je suis prêt à l’affronter !",
+        "nextBlockId": "combat_aldebaran"
+      },
+      {
+        "text": "Tenter de fuir malgré tout",
+        "nextBlockId": "mort_fuite_taureau"
+      }
+    ]
+  },
+  {
+    "id": "combat_aldebaran",
+    "text": "Le combat commence. Aldébaran lève son bras et lance la Grande Corne !",
+    "isBattle": true,
+    "enemy": "Aldébaran",
+    "enemySprite": "aldebaran", 
+    "choices": [
+      {
+        "text": "Esquiver et contre-attaquer",
+        "nextBlockId": "aldebaran_esquive"
+      },
+      {
+        "text": "Bloquer avec mon cosmos",
+        "nextBlockId": "aldebaran_blocage"
+      }
+    ]
+  },
+  {
+    "id": "aldebaran_esquive",
+    "text": "J’esquive de justesse ! Mon attaque frappe son flanc. Il gronde, surpris par ma vitesse.",
+    "choices": [
+      {
+        "text": "Poursuivre avec une attaque Météore",
+        "nextBlockId": "victoire_aldebaran"
+      }
+    ]
+  },
+  {
+    "id": "aldebaran_blocage",
+    "text": "Je tente de bloquer… Son coup est trop puissant. Mon armure encaisse, mais je suis projeté au sol. Ma vision se brouille...",
+    "gameOver": true,
+    "choices": [
+      {
+        "text": "Recommencer au début",
+        "nextBlockId": "start"
+      }
+    ]
+  },
+  {
+    "id": "victoire_aldebaran",
+    "text": "Aldébaran se relève lentement, un genou à terre. 'Tu m’as vaincu, chevalier. Tu peux continuer… Mais sois prêt, les prochaines maisons ne te feront aucun cadeau.'",
+    "choices": [
+      {
+        "text": "Traverser la Maison du Taureau",
+        "nextBlockId": "maison_gemeaux"
+      }
+    ]
+  },
+  {
+    "id": "mort_fuite_taureau",
+    "text": "Je tourne les talons, mais trop tard… Aldébaran me rattrape. 'Fuir le combat ? Tu n’es pas digne !' Un dernier coup me plonge dans l’ombre.",
+    "gameOver": true,
+    "choices": [
+      {
+        "text": "Recommencer l’aventure",
+        "nextBlockId": "start"
+      }
+    ]
+  },
+  {
+    "id": "maison_gemeaux",
+    "text": "Je pénètre dans la Maison des Gémeaux. Une étrange énergie m’enveloppe… Deux couloirs apparaissent, et une voix retentit dans ma tête : 'Par ici, Seiya… fais-moi confiance.'",
+    "choices": [
+      {
+        "text": "Suivre la voix à droite",
+        "nextBlockId": "mort_illusion"
+      },
+      {
+        "text": "Choisir le chemin gauche",
+        "nextBlockId": "sortie_labyrinthe"
+      }
+    ]
+  },
+  {
+    "id": "mort_illusion",
+    "text": "C’était une illusion ! Je suis pris au piège dans une boucle temporelle. Le vrai Saga rit dans l’ombre…",
+    "gameOver": true,
+    "choices": [
+      {
+        "text": "Retourner au début",
+        "nextBlockId": "start"
+      }
+    ]
+  },
+  {
+    "id": "sortie_labyrinthe",
+    "text": "Une silhouette se dresse devant moi… C’est Saga, le chevalier des Gémeaux ! Le véritable combat commence.",
+    "choices": [
+      {
+        "text": "Engager le combat contre Saga",
+        "nextBlockId": "combat_saga"
+      }
+    ]
+  },
+  {
+    "id": "combat_saga",
+    "text": "Saga concentre son cosmos maléfique. Prépare-toi à un combat sans merci !",
+    "isBattle": true,
+    "enemy": "Saga",
+    "enemySprite": "saga", 
+    "choices": []
+  },
+  {
+    "id": "victoire_saga",
+    "text": "Saga chute à genoux, son armure craque sous le poids de son double maléfique. Mais il reprend ses esprits. 'Seiya… merci. Tu m’as libéré de mon illusion. Va, Athéna a besoin de toi.'",
+    "choices": [
+      {
+        "text": "Traverser la Maison des Gémeaux",
+        "nextBlockId": "maison_cancer"
+      }
+    ]
+  },
+  {
+    "id": "maison_cancer",
+    "text": "Je pénètre dans la Maison du Cancer. Une aura lugubre flotte dans l’air… Des âmes errantes chuchotent des mots que je ne comprends pas. Un rire sinistre résonne...",
+    "choices": [
+      {
+        "text": "Avancer malgré tout",
+        "nextBlockId": "apparition_masque"
+      }
+    ]
+  },
+  {
+    "id": "apparition_masque",
+    "text": "Un homme masqué se matérialise devant moi. C’est Deathmask, le Chevalier d’Or du Cancer ! Il semble se nourrir des âmes de ses ennemis.",
+    "choices": [
+      {
+        "text": "Préparer une attaque",
+        "nextBlockId": "combat_deathmask"
+      },
+      {
+        "text": "Tenter de parlementer",
+        "nextBlockId": "mort_parlement"
+      }
+    ]
+  },
+  {
+    "id": "combat_deathmask",
+    "text": "Le combat contre Deathmask commence !",
+    "isBattle": true,
+    "enemy": "Deathmask",
+    "enemySprite": "deathmask",
+    "choices": []
+  },
+  {
+    "id": "victoire_deathmask",
+    "text": "Le masque de Deathmask se brise. Il hurle dans les limbes avant de disparaître. Le silence retombe. Je dois continuer… Athéna compte sur moi.",
+    "choices": [
+      {
+        "text": "Traverser la Maison du Cancer",
+        "nextBlockId": "maison_lion"
+      }
+    ]
+  },
+  {
+    "id": "mort_parlement",
+    "text": "Deathmask se moque de ma faiblesse. 'Tu crois pouvoir discuter avec la mort ?' Une onde noire me transperce. Tout devient noir.",
+    "gameOver": true,
+    "choices": [
+      {
+        "text": "Recommencer depuis le début",
+        "nextBlockId": "start"
+      }
+    ]
+  },
+  {
+    "id": "maison_lion",
+    "text": "Je pénètre dans la Maison du Lion. Une aura flamboyante m’envahit… Un chevalier se dresse face à moi, sa chevelure dorée flamboyante : c’est Aiolia !",
+    "choices": [
+      {
+        "text": "Lui faire face",
+        "nextBlockId": "interaction_aiolia"
+      }
+    ]
+  },
+  {
+    "id": "interaction_aiolia",
+    "text": "Aiolia : \"Seiya… Je sens ton cosmos. Si tu veux passer, tu devras me prouver ta détermination !\"",
+    "choices": [
+      {
+        "text": "Je suis prêt à l’affronter !",
+        "nextBlockId": "combat_aiolia"
+      },
+      {
+        "text": "Essayer de le convaincre de me laisser passer",
+        "nextBlockId": "mort_convaincre_lion"
+      }
+    ]
+  },
+  {
+    "id": "combat_aiolia",
+    "text": "Aiolia fait jaillir une onde de lumière. Prépare-toi à affronter le Chevalier du Lion !",
+    "isBattle": true,
+    "enemy": "Aiolia",
+    "enemySprite": "aiolia",
+    "choices": []
+  },
+  {
+    "id": "victoire_aiolia",
+    "text": "Aiolia tombe à genoux. \"Tu es digne, Seiya. Continue ton chemin et protège Athéna de toutes tes forces.\"",
+    "choices": [
+      {
+        "text": "Traverser la Maison du Lion",
+        "nextBlockId": "maison_vierge"
+      }
+    ]
+  },
+  {
+    "id": "mort_convaincre_lion",
+    "text": "Aiolia : \"Tu crois que la parole suffit ?! La force guide les Chevaliers !\" Il frappe sans retenue. Je sombre dans l’inconscience.",
+    "gameOver": true,
+    "choices": [
+      {
+        "text": "Recommencer l'aventure",
+        "nextBlockId": "start"
+      }
+    ]
+  },
+  {
+    "id": "maison_vierge",
+    "text": "Je pénètre dans la Maison de la Vierge. Une atmosphère de sérénité absolue m’envahit. Au fond du temple, les yeux clos en méditation profonde, Shaka, le chevalier d'Or de la Vierge, se tient immobile.",
+    "choices": [
+      {
+        "text": "Approcher prudemment",
+        "nextBlockId": "interaction_shaka"
+      }
+    ]
+  },
+  {
+    "id": "interaction_shaka",
+    "text": "Shaka ouvre lentement les yeux : \"Seiya, le chevalier aveuglé par l'urgence… Pour sauver Athéna, sauras-tu surmonter l’épreuve du chevalier le plus proche des dieux ?\"",
+    "choices": [
+      {
+        "text": "L'affronter directement",
+        "nextBlockId": "combat_shaka"
+      },
+      {
+        "text": "Tenter de méditer avec lui",
+        "nextBlockId": "mort_meditation_vierge"
+      }
+    ]
+  },
+  {
+    "id": "combat_shaka",
+    "text": "Shaka déploie son cosmos immense. Une lumière aveuglante inonde la pièce. Le combat commence contre le Chevalier de la Vierge !",
+    "isBattle": true,
+    "enemy": "Shaka",
+    "enemySprite": "shaka",
+    "choices": []
+  },
+  {
+    "id": "victoire_shaka",
+    "text": "Épuisé mais vaincu, Shaka sourit doucement. \"Tu as su vaincre les illusions de ce monde, Seiya. Va maintenant, le temps presse.\"",
+    "choices": [
+      {
+        "text": "Traverser la Maison de la Vierge",
+        "nextBlockId": "maison_balance"
+      }
+    ]
+  },
+  {
+    "id": "mort_meditation_vierge",
+    "text": "Alors que je tente de méditer, mon esprit vacille devant la puissance de Shaka. Il murmure : \"Ton âme n’est pas prête…\" Je sombre doucement dans le néant.",
+    "gameOver": true,
+    "choices": [
+      {
+        "text": "Recommencer l'aventure",
+        "nextBlockId": "start"
+      }
+    ]
+  },
+  {
+    "id": "maison_balance",
+    "text": "Me voici dans la Maison de la Balance. Des armes légendaires reposent sur des autels sacrés. Une voix résonne dans mon esprit : \"Seiya... Un vrai chevalier n'use de la force qu'en dernier recours. Choisis avec sagesse.\"",
+    "choices": [
+      {
+        "text": "Prendre une arme au hasard",
+        "nextBlockId": "mort_mauvais_choix_balance"
+      },
+      {
+        "text": "Observer les armes avant de choisir",
+        "nextBlockId": "bonne_reflexion_balance"
+      }
+    ]
+  },
+  {
+    "id": "mort_mauvais_choix_balance",
+    "text": "À peine ma main effleure l'arme qu'une onde de choc me projette contre un mur. La voix reprend : \"Tu as choisi sans réflexion… et sans honneur.\"",
+    "gameOver": true,
+    "choices": [
+      {
+        "text": "Recommencer depuis le début",
+        "nextBlockId": "start"
+      }
+    ]
+  },
+  {
+    "id": "bonne_reflexion_balance",
+    "text": "J'analyse chaque arme. Une seule semble en harmonie avec mon cosmos. En la touchant, une lumière m'entoure. \"Tu as fait preuve de discernement, Seiya. Poursuis ta route.\"",
+    "choices": [
+      {
+        "text": "Traverser la Maison de la Balance",
+        "nextBlockId": "maison_scorpion"
+      }
+    ]
+  },
+  {
+    "id": "maison_scorpion",
+    "text": "Je pénètre dans la Maison du Scorpion. Une ombre se dresse devant moi, c'est Milo, le Chevalier d'Or du Scorpion. Son regard est perçant, et il sourit légèrement. 'Seiya, es-tu prêt à ressentir la douleur des Antares ?'",
+    "choices": [
+      {
+        "text": "L'affronter directement",
+        "nextBlockId": "combat_milo"
+      },
+      {
+        "text": "Tenter de résister à ses attaques pour prouver ma force",
+        "nextBlockId": "epreuve_milo"
+      }
+    ]
+  },
+  {
+    "id": "epreuve_milo",
+    "text": "Milo concentre son cosmos et envoie une attaque Antares. Je serre les dents et résiste à la douleur. 'Impressionnant, Seiya. Peu de chevaliers peuvent supporter cela. Tu es digne de continuer.'",
+    "choices": [
+      {
+        "text": "Traverser la Maison du Scorpion",
+        "nextBlockId": "maison_sagittaire"
+      }
+    ]
+  },
+  {
+    "id": "maison_sagittaire",
+    "text": "Je pénètre dans la Maison du Sagittaire. Une lumière dorée m'éblouit. Au centre, le Chevalier d'Or du Sagittaire, Aiolos, se tient majestueusement. 'Seiya, pour passer, tu dois prouver que ton cœur est pur. Tire cette flèche et vise la cible de la vérité.'",
+    "choices": [
+      {
+        "text": "Tirer la flèche avec confiance",
+        "nextBlockId": "epreuve_aiolos"
+      },
+      {
+        "text": "Hésiter et demander des conseils",
+        "nextBlockId": "mort_hesitation_sagittaire"
+      }
+    ]
+  },
+  {
+    "id": "epreuve_aiolos",
+    "text": "Je concentre mon cosmos et tire la flèche. Elle atteint la cible en plein centre. Aiolos sourit : 'Tu as prouvé ta pureté. Continue, Seiya.'",
+    "choices": [
+      {
+        "text": "Traverser la Maison du Sagittaire",
+        "nextBlockId": "maison_capricorne"
+      }
+    ]
+  },
+  {
+    "id": "mort_hesitation_sagittaire",
+    "text": "Mon hésitation me coûte cher. La flèche dévie et déclenche un piège. Aiolos secoue la tête : 'Un chevalier ne doute jamais.'",
+    "gameOver": true,
+    "choices": [
+      {
+        "text": "Recommencer l'aventure",
+        "nextBlockId": "start"
+      }
+    ]
+  },
+  {
+    "id": "maison_capricorne",
+    "text": "Je pénètre dans la Maison du Capricorne. Shura, le Chevalier d'Or, m'attend, son épée Excalibur brillant dans sa main. 'Seiya, seul celui qui peut briser une lame sacrée peut passer.'",
+    "choices": [
+      {
+        "text": "Tenter de briser Excalibur avec mon cosmos",
+        "nextBlockId": "epreuve_shura"
+      },
+      {
+        "text": "Esquiver et chercher une ouverture",
+        "nextBlockId": "mort_esquive_capricorne"
+      }
+    ]
+  },
+  {
+    "id": "epreuve_shura",
+    "text": "Je concentre mon cosmos et frappe Excalibur de toutes mes forces. La lame se fissure légèrement. Shura sourit : 'Tu es digne de continuer.'",
+    "choices": [
+      {
+        "text": "Traverser la Maison du Capricorne",
+        "nextBlockId": "maison_aquarium"
+      }
+    ]
+  },
+  {
+    "id": "mort_esquive_capricorne",
+    "text": "Je tente d'esquiver, mais Shura est trop rapide. Excalibur me frappe de plein fouet. 'Tu n'étais pas prêt,' dit-il en me regardant tomber.",
+    "gameOver": true,
+    "choices": [
+      {
+        "text": "Recommencer l'aventure",
+        "nextBlockId": "start"
+      }
+    ]
+  },
+  {
+    "id": "maison_aquarium",
+    "text": "Je pénètre dans la Maison du Verseau. Camus, le Chevalier d'Or, m'attend, entouré d'une aura glaciale. 'Seiya, peux-tu briser la glace éternelle pour sauver Athéna ?'",
+    "choices": [
+      {
+        "text": "Concentrer mon cosmos pour briser la glace",
+        "nextBlockId": "epreuve_camus"
+      },
+      {
+        "text": "Tenter de contourner la glace",
+        "nextBlockId": "mort_contourner_verseau"
+      }
+    ]
+  },
+  {
+    "id": "epreuve_camus",
+    "text": "Je concentre mon cosmos et frappe la glace de toutes mes forces. Elle se brise en mille morceaux. Camus hoche la tête : 'Tu as prouvé ta détermination. Continue.'",
+    "choices": [
+      {
+        "text": "Traverser la Maison du Verseau",
+        "nextBlockId": "maison_poissons"
+      }
+    ]
+  },
+  {
+    "id": "mort_contourner_verseau",
+    "text": "Je tente de contourner la glace, mais Camus m'arrête d'un coup glacial. 'Tu ne peux pas fuir l'épreuve.'",
+    "gameOver": true,
+    "choices": [
+      {
+        "text": "Recommencer l'aventure",
+        "nextBlockId": "start"
+      }
+    ]
+  },
+  {
+    "id": "maison_poissons",
+    "text": "Je pénètre dans la Maison des Poissons. Aphrodite, le Chevalier d'Or, m'attend, entouré de roses empoisonnées. 'Seiya, peux-tu traverser ce champ de roses sans succomber ?'",
+    "choices": [
+      {
+        "text": "Utiliser mon cosmos pour créer une barrière",
+        "nextBlockId": "epreuve_aphrodite"
+      },
+      {
+        "text": "Tenter de courir à travers les roses",
+        "nextBlockId": "mort_roses_poissons"
+      }
+    ]
+  },
+  {
+    "id": "epreuve_aphrodite",
+    "text": "Je concentre mon cosmos et crée une barrière protectrice. Les roses ne m'affectent pas. Aphrodite sourit : 'Tu es digne de continuer.'",
+    "choices": [
+      {
+        "text": "Traverser la Maison des Poissons",
+        "nextBlockId": "maison_finale"
+      }
+    ]
+  },
+  {
+    "id": "mort_roses_poissons",
+    "text": "Je tente de courir à travers les roses, mais leur poison est trop puissant. Je m'effondre, incapable de continuer.",
+    "gameOver": true,
+    "choices": [
+      {
+        "text": "Recommencer l'aventure",
+        "nextBlockId": "start"
+      }
+    ]
+  },
+  {
+    "id": "maison_finale",
+    "text": "Je pénètre dans la Maison du Grand Pope. Une aura sombre m’enveloppe. Le Grand Pope se tient devant moi, son regard est perçant.",
+    "choices": [
+      {
+        "text": "L'affronter",
+        "nextBlockId": "combat_grand_pope"
+      },
+      {
+        "text": "Essayer de le convaincre de me laisser passer",
+        "nextBlockId": "mort_convaincre_grand_pope"
+      }
+    ]
+  },
+  {
+    "id": "combat_grand_pope",
+    "text": "Le Grand Pope concentre son cosmos. Le combat commence !",
+    "isBattle": true,
+    "enemy": "GrandPope",
+    "enemySprite": "grand_pope",
+    "choices": []
+  },
+  {
+    "id": "victoire_grand_pope",
+    "text": "Le Grand Pope tombe à genoux, épuisé. \"Tu es fort, Seiya. Je ne peux que te laisser passer.\"",
+    "choices": [
+      {
+        "text": "Traverser la Maison du Grand Pope",
+        "nextBlockId": "fin"
+      }
+    ]
+  },
+  {
+    "id": "mort_convaincre_grand_pope",
+    "text": "Le Grand Pope éclate de rire. \"Convaincre un Grand Pope ? Tu es fou !\" Il me frappe avec une telle force que je perds connaissance.",
+    "gameOver": true,
+    "choices": [
+      {
+        "text": "Recommencer l'aventure",
+        "nextBlockId": "start"
+      }
+    ]
+  },
+  {
+    "id": "fin",
+    "text": "Je me tiens devant Athéna, le cœur battant. \"Athéna, je suis là !\" Elle sourit faiblement. \"Merci, Seiya...\"",
+    "choices": [
+      {
+        "text": "Fin de l'histoire",
+        "nextBlockId": null
+      }
+    ]
+  }
+]

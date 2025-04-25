@@ -1,0 +1,8 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <bitmap
+            android:src="@drawable/bg_constellation"
+            android:tileMode="repeat"
+            android:gravity="center" />
+    </item>
+</layer-list>
